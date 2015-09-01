@@ -1,7 +1,7 @@
 {
-  "name": "node-js-getting-started",
+  "name": "Joel Doyle Website",
   "version": "0.1.4",
-  "description": "A sample Node.js app using Express 4",
+  "description": "The personal website of me, Joel Doyle.",
   "main": "index.js",
   "scripts": {
     "start": "npm run dist && node index.js",
