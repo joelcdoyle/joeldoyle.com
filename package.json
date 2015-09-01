@@ -4,9 +4,14 @@
   "description": "A sample Node.js app using Express 4",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "copy:views": "mkdir -p public && cp -R src/**.html ./public/",
+    "less": "lessc ./src/less/style.less ./public/css/style.css",
+    "browserify": "browserify ./src/app.js -o ./public/bundle.js",
+    "dist": "npm run copy:views && npm run less && npm run browserify"
   },
   "dependencies": {
+    "angular": "^1.4.5",
     "ejs": "^2.3.1",
     "express": "~4.9.x"
   },
@@ -22,5 +27,9 @@
     "heroku",
     "express"
   ],
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^11.0.1",
+    "less": "^2.5.1"
+  }
 }
