@@ -6,7 +6,7 @@
   "scripts": {
     "start": "npm run dist && node index.js",
     "copy:views": "mkdir -p public && cp -R src/**.html ./public/",
-    "less": "lessc ./src/less/style.less ./public/css/style.css",
+    "less": "mkdir -p public/css && lessc ./src/less/style.less ./public/css/style.css",
     "browserify": "browserify ./src/app.js -o ./public/bundle.js",
     "dist": "npm run copy:views && npm run less && npm run browserify"
   },
