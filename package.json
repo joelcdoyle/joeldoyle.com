@@ -8,7 +8,8 @@
     "copy:views": "mkdir -p public && cp -R src/**.html ./public/",
     "less": "mkdir -p public/css && lessc ./src/less/style.less ./public/css/style.css",
     "browserify": "browserify ./src/app.js -o ./public/bundle.js",
-    "dist": "npm run copy:views && npm run less && npm run browserify"
+    "dist": "npm run copy:views && npm run less && npm run browserify",
+    "watch": "watch 'npm run dist' ./src"
   },
   "dependencies": {
     "angular": "^1.4.5",
@@ -30,6 +31,7 @@
   "license": "MIT",
   "devDependencies": {
     "browserify": "^11.0.1",
-    "less": "^2.5.1"
+    "less": "^2.5.1",
+    "watch": "^0.16.0"
   }
 }
